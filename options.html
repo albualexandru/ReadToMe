@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReadToMe Options</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>ReadToMe Settings</h1>
+
+      <label for="apiKey">Google Cloud API key</label>
+      <input id="apiKey" type="password" autocomplete="off" />
+
+      <label for="voiceName">Chirp voice name</label>
+      <input id="voiceName" type="text" />
+
+      <label for="languageCode">Language code</label>
+      <input id="languageCode" type="text" />
+
+      <label for="speakingRate">Playback speed</label>
+      <select id="speakingRate">
+        <option value="0.5">0.5x</option>
+        <option value="0.75">0.75x</option>
+        <option value="1">1x (normal)</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+        <option value="1.75">1.75x</option>
+        <option value="2">2x</option>
+      </select>
+
+      <button id="save">Save settings</button>
+      <p id="status" role="status" aria-live="polite"></p>
+
+      <p class="hint">Select text on any page, right-click, and choose “Read selected text aloud (Google Chirp)”.</p>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>
