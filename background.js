@@ -49,6 +49,9 @@ chrome.contextMenus.onClicked.addListener(async (info) => {
 
 function createContextMenu() {
   chrome.contextMenus.remove(CONTEXT_MENU_ID, () => {
+    // Clear any error - it's expected if the menu item doesn't exist yet
+    chrome.runtime.lastError;
+    
     chrome.contextMenus.create({
       id: CONTEXT_MENU_ID,
       title: "Read selected text aloud (Google Chirp)",
